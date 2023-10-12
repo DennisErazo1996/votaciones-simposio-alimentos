@@ -1,0 +1,83 @@
+:root{
+    /* Colores */
+    --verde: #1BA333;
+    --amarillo: #FFCC00;
+    --amarillo07: rgba(255,204,0,0.7);
+    --azul: #203B76;
+    --verdeOscuro: #135423;
+    --verdeClaro: #d3eed7;
+    --cafe: #5B3700;
+    --azulClaro: #0094E9;
+    --blanco: #FFF;
+    --blancoE: #eee;
+    --blancoE5: #e5e5e5;
+    --blancoC: #ccc;
+    --negro: #000;
+    --gris6: #666;
+    --gris9: #999;
+    --rojo: #FF0000;
+    --colorTexto: #303030;
+}
+
+body{
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+header{
+    background-color: var(--verde);
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    background-color: var(--verdeOscuro);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+
+    
+}
+
+img.logo-unag-blanco{
+    width: 230px;
+}
+
+div.logo-simposio-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img.logo-simposio{
+    width: 350px;
+}
+
+.uk-button-primary{
+    background-color: var(--verde) !important;
+}
+
+.uk-button-primary:hover{
+    background-color: var(--verdeOscuro) !important;
+}
+
+div.uk-card div.categoria-container{
+    background-color: var(--verde);
+    color: white;
+    border-radius: 15px;
+
+}
+
+img.icon-poster{
+    width: 135px;
+}
