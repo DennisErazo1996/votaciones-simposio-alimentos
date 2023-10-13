@@ -72,7 +72,7 @@ img.logo-simposio{
 }
 
 div.uk-card div.categoria-container{
-    background-color: var(--verde);
+    background-color: var(--verdeOscuro);
     color: white;
     border-radius: 15px;
 
@@ -80,4 +80,12 @@ div.uk-card div.categoria-container{
 
 img.icon-poster{
     width: 135px;
+}
+
+button.uk-button-primary:disabled{
+    background-color: #ccc !important;
+}
+
+div.uk-card{
+    background-color: #f0f0f0 !important;
 }

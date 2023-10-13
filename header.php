@@ -17,3 +17,13 @@
 
 <body>
 
+<div id="loading">
+    <div class="la-ball-scale-pulse la-dark la-3x">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<header>
+    <img class="logo-unag-blanco" src="./img/logo-unag-blanco.png" alt="logo-unag-blanco">
+</header>
