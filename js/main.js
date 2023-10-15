@@ -71,6 +71,8 @@ $(document).ready(function () {
     
 });
 
+
+
 $('.btn-categoria').on('click', function(e) {
     const idCategoria = e.currentTarget.dataset.id_categoria;
     const idParticipanteCookie = getCookie('id');
@@ -141,6 +143,7 @@ $('#btn-identificador-aceptar').on('click', function () {
 function borrarCookie(nombre) {
     document.cookie = nombre + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
+
 
 function getCookie(name) {
     const value = "; " + document.cookie;
