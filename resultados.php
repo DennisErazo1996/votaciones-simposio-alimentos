@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 
-<?php include_once('./functions/obtener-trabajos.php') ?>
+<?php include_once('./functions/obtener-resultados-categorias.php') ?>
 
 <div class="uk-container uk-container-large">
 
@@ -10,7 +10,7 @@
 
     <div class="logo-simposio-container">
         <img src="./img/logo-simposio.png" alt="" class="logo-simposio">
-        <h3 class="uk-margin-remove">Categoría: <strong><?php echo $descripcionCategoria; ?></strong></h3>
+        <h3 class="uk-margin-remove">Resultados por categoría</h3>
         <br><br>
     </div>
 
@@ -22,19 +22,18 @@
                 <?php
     	            if($row['id_categoria'] == 1 || $row['id_categoria'] == 3){
                         echo '<img class="uk-margin-bottom icon-poster" src="./img/poster.png" alt="poster">';
-                        echo '<h2>Póster #'.$row['id_trabajo'].'</h2>';
                     }else{
                         echo ' <img class="uk-margin-bottom icon-poster" src="./img/presentacion-oral.png" alt="poster">';
-                        echo '<h3>Presentación #'.$row['id_trabajo'].'</h3>';
                     }
                 ?>
-                <div class="categoria-container-votacion uk-padding-small" <?php 
-                if($row['id_categoria'] == 2 || $row['id_categoria'] == 4){echo 'style="display:none"';} ?>>
-                    <p><?php echo $row['descripcion']; ?></p>
+                <div class="categoria-container-votacion uk-padding-small">
+                    <p><?php echo $row['descripcion_trabajo']; ?></p>
                 </div>
-                <p><?php echo $row['autor']; ?></p>
-                <button class="uk-button uk-button-primary btn-votar-trabajo" data-id_categoria="<?php echo $row['id_categoria']; ?>" 
-                data-id_trabajo="<?php echo $row['id_trabajo']; ?>"><span uk-icon="check"></span> Votar</button>
+                <p>Categoría: <strong><?php echo $row['categoria']; ?></strong></p>
+                <p>VOTOS:</p>
+                <div class="">
+                    <h1 class="votos"><?php echo $row['votos']; ?></h1>
+                </div>
             </div>
         </div>
         <?php } ?>
@@ -45,19 +44,5 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php include_once('footer.php') ?>

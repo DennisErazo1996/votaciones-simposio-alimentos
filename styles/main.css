@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 :root{
     /* Colores */
     --verde: #1BA333;
@@ -17,6 +19,10 @@
     --gris9: #999;
     --rojo: #FF0000;
     --colorTexto: #303030;
+}
+
+*{
+    font-family: 'Montserrat' !important;
 }
 
 body{
@@ -88,4 +94,19 @@ button.uk-button-primary:disabled{
 
 div.uk-card{
     background-color: #f0f0f0 !important;
+}
+
+div.uk-card div.categoria-container-votacion{
+    background-color: var(--verdeOscuro);
+    color: white;
+}
+
+.jconfirm{
+    background-color: #303030cb;
+}
+
+div.uk-grid-match h1.votos{
+    color: var(--verde);
+    font-weight: 700;
+    
 }

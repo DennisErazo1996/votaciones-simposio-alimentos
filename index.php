@@ -3,14 +3,15 @@
 
 <div class="uk-container uk-container-large">
 
-    <div class="uk-margin-medium-top">
+    <div class=" uk-margin-medium-top uk-flex uk-flex-between">
         <a class="uk-button uk-button-primary" href="https://portal.unag.edu.hn/v-simposio-de-alimentos/"><span uk-icon="arrow-left"></span> Regresar</a>
+        <a class="uk-button uk-button-primary" href="./resultados.php"><span uk-icon="file-edit"></span> Resultados</a>
     </div>
 
     <div class="logo-simposio-container">
         <img src="./img/logo-simposio.png" alt="" class="logo-simposio">
         <button class="uk-button uk-button-primary" id="btn-ingrese-identificador"  uk-toggle="target: #modal-identificador"><span uk-icon="user"></span> Ingrese su identificador</button>
-        <h3 class="uk-margin-remove" id="mostrar-participante"></h3>
+        <h3 class="uk-margin-remove uk-text-center" id="mostrar-participante"></h3>
     </div>
 
     <h2 class="uk-heading-line"><span>Votaciones | Categorías</span></h2><br>

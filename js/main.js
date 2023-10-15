@@ -20,15 +20,89 @@ $(document).ready(function () {
         $('#mostrar-participante').html("Participante: <strong>"+nombreCookie+"</strong>");
     }
     console.log(identificadorCookie)
+
+    
+
+
+    $('.uk-grid-match').on('click', 'button.btn-votar-trabajo', function(e) {
+        const idCategoria = e.currentTarget.dataset.id_categoria;3
+        const idTrabajo = e.currentTarget.dataset.id_trabajo;
+        const idParticipanteCookie = getCookie('id');
+        
+        $.confirm({
+            title: 'Confirmar Voto',
+            content: '¿Seguro que quiere votar por el #'+idTrabajo,
+            boxWidth: '400px',
+            useBootstrap: false,
+            buttons: {  
+                confirmar: function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: './functions/registrar-voto.php?categoria='+idCategoria+'&participante='+idParticipanteCookie+'&idTrabajo='+idTrabajo,
+                        success: function(response) {
+                            $.alert({
+                                title: 'Muchas gracias',
+                                content: 'Su voto ha sido registrado',
+                                boxWidth: '350px',
+                                useBootstrap: false,
+                                buttons: {
+                                    ok: function (){
+                                        window.location.href = './'
+                                    }
+                                }
+                            });;
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error en la solicitud AJAX:', error);
+                        }
+                    });
+                    
+                },
+                cancelar: function () {
+                   
+                }
+            }
+        });
+              
+    
+    
+    });
     
     
 });
 
 $('.btn-categoria').on('click', function(e) {
     const idCategoria = e.currentTarget.dataset.id_categoria;
-    const idCookie = getCookie('id');
-    window.location.href = './votacion-categoria.php?categoria='+idCategoria+'&participante='+idCookie;
+    const idParticipanteCookie = getCookie('id');
+
+    $.ajax({
+        type: 'GET',
+        url: './functions/validar-voto.php',
+        data: {idCategoria: idCategoria, idParticipante: idParticipanteCookie},
+        dataType: 'json',
+        success: function(response) {
+
+            if (response.idCategoria == null && response.idParticipante == null) {
+                window.location.href = './votacion-categoria.php?categoria='+idCategoria+'&participante='+idParticipanteCookie;
+            } else {
+                $.alert({
+                    title: 'Aviso',
+                    content: 'Ya se ha registrado su voto en esta categoría, por favor, seleccione otra categoría',
+                    boxWidth: '350px',
+                    type: 'red',
+                    useBootstrap: false,
+                });;
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('Error en la solicitud AJAX:', error);
+        }
+    });
+
+    //window.location.href = './votacion-categoria.php?categoria='+idCategoria+'&participante='+idParticipanteCookie;
 });
+
+
 
 $('#btn-identificador-aceptar').on('click', function () {
         
@@ -74,3 +148,4 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(";").shift();
     return "";
 }
+
