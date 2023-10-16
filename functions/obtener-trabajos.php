@@ -8,7 +8,7 @@ $idParticipante = $_GET['participante'];
 // Consulta para obtener los posters de la categoría
 $sql = "Select * from (SELECT p.id as id_trabajo, p.autor, p.descripcion, p.id_categoria, cat.descripcion as descripcion_categoria FROM tbl_posters p join tbl_categorias cat on p.id_categoria = cat.id
 UNION ALL
-SELECT o.id as id_trabajo, o.descripcion, ' ' as autor , o.id_categoria, cat.descripcion as descripcion_categoria FROM tbl_descripcion_oral o join tbl_categorias cat on o.id_categoria = cat.id)x
+SELECT o.id as id_trabajo, o.descripcion, o.autor , o.id_categoria, cat.descripcion as descripcion_categoria FROM tbl_descripcion_oral o join tbl_categorias cat on o.id_categoria = cat.id)x
 where x.id_categoria = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param('i', $idCategoria);

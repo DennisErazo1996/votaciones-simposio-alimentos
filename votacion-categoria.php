@@ -28,8 +28,7 @@
                         echo '<h3>Presentación #'.$row['id_trabajo'].'</h3>';
                     }
                 ?>
-                <div class="categoria-container-votacion uk-padding-small" <?php 
-                if($row['id_categoria'] == 2 || $row['id_categoria'] == 4){echo 'style="display:none"';} ?>>
+                <div class="categoria-container-votacion uk-padding-small">
                     <p><?php echo $row['descripcion']; ?></p>
                 </div>
                 <p><?php echo $row['autor']; ?></p>

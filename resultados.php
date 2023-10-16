@@ -22,8 +22,10 @@
                 <?php
     	            if($row['id_categoria'] == 1 || $row['id_categoria'] == 3){
                         echo '<img class="uk-margin-bottom icon-poster" src="./img/poster.png" alt="poster">';
+                        echo '<h2>Póster #'.$row['id_trabajo'].'</h2>';
                     }else{
                         echo ' <img class="uk-margin-bottom icon-poster" src="./img/presentacion-oral.png" alt="poster">';
+                        echo '<h3>Presentación #'.$row['id_trabajo'].'</h3>';
                     }
                 ?>
                 <div class="categoria-container-votacion uk-padding-small">
