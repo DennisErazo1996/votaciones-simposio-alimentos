@@ -12,6 +12,7 @@
         <img src="./img/logo-simposio.png" alt="" class="logo-simposio">
         <button class="uk-button uk-button-primary" id="btn-ingrese-identificador"  uk-toggle="target: #modal-identificador"><span uk-icon="user"></span> Ingrese su identificador</button>
         <h3 class="uk-margin-remove uk-text-center" id="mostrar-participante"></h3>
+        <h3 class="uk-margin-remove uk-text-center">¡Las Votaciones han finalizado, gracias por participar!</h3>
     </div>
 
     <h2 class="uk-heading-line"><span>Votaciones | Categorías</span></h2><br>
@@ -24,7 +25,7 @@
                     <p>Categoría:</p>
                 </div>
                 <p>Mejor <strong>Póster</strong> presentado por <strong>Estudiantes</strong></p>
-                <button id="1" class="uk-button uk-button-primary btn-categoria" data-id_categoria="1"><span uk-icon="chevron-right"></span> Seleccionar</button>
+                <!-- <button id="1" class="uk-button uk-button-primary btn-categoria" data-id_categoria="1"><span uk-icon="chevron-right"></span> Seleccionar</button> -->
             </div>
         </div>
         <div>
@@ -34,7 +35,7 @@
                     <p>Categoría:</p>
                 </div>
                 <p>Mejor <strong>Presentación Oral</strong> por <strong>Estudiantes</strong></p>
-                <button id="2" class="uk-button uk-button-primary btn-categoria" data-id_categoria="2"><span uk-icon="chevron-right"></span> Seleccionar</button>
+                <!-- <button id="2" class="uk-button uk-button-primary btn-categoria" data-id_categoria="2"><span uk-icon="chevron-right"></span> Seleccionar</button> -->
             </div>
         </div>
         <div>
@@ -44,7 +45,7 @@
                     <p>Categoría:</p>
                 </div>
                 <p>Mejor <strong>Póster</strong> presentado por <strong>profesores</strong> y <strong>otros interesados</strong></p>
-                <button id="3" class="uk-button uk-button-primary btn-categoria" data-id_categoria="3"><span uk-icon="chevron-right"></span> Seleccionar</button>
+                <!-- <button id="3" class="uk-button uk-button-primary btn-categoria" data-id_categoria="3"><span uk-icon="chevron-right"></span> Seleccionar</button> -->
             </div>
         </div>
         <div>
@@ -54,7 +55,7 @@
                     <p>Categoría:</p>
                 </div>
                 <p>Mejor <strong>Presentación Oral</strong> por <strong>profesores</strong> y <strong>otros interesados</strong></p>
-                <button id="4" class="uk-button uk-button-primary btn-categoria" data-id_categoria="4"><span uk-icon="chevron-right"></span> Seleccionar</button>
+                <!-- <button id="4" class="uk-button uk-button-primary btn-categoria" data-id_categoria="4"><span uk-icon="chevron-right"></span> Seleccionar</button> -->
             </div>
         </div>
     </div>

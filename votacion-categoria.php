@@ -32,8 +32,8 @@
                     <p><?php echo $row['descripcion']; ?></p>
                 </div>
                 <p><?php echo $row['autor']; ?></p>
-                <button class="uk-button uk-button-primary btn-votar-trabajo" data-id_categoria="<?php echo $row['id_categoria']; ?>" 
-                data-id_trabajo="<?php echo $row['id_trabajo']; ?>"><span uk-icon="check"></span> Votar</button>
+                <!-- <button class="uk-button uk-button-primary btn-votar-trabajo" data-id_categoria="<?php echo $row['id_categoria']; ?>" 
+                data-id_trabajo="<?php echo $row['id_trabajo']; ?>"><span uk-icon="check"></span> Votar</button> -->
             </div>
         </div>
         <?php } ?>
