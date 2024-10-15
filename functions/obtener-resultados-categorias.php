@@ -22,6 +22,7 @@ $sql = "WITH CategoriasConVotos AS (
     JOIN tbl_categorias c ON c.id = v.id_categoria
     LEFT JOIN tbl_posters p ON p.id = v.id_trabajo
     LEFT JOIN tbl_descripcion_oral o ON o.id = v.id_trabajo
+    WHERE v.deleted_at is null
     GROUP BY v.id_categoria, c.descripcion, p.descripcion, o.descripcion, p.id, o.id
 )
 ,

@@ -25,13 +25,14 @@ $(document).ready(function () {
 
 
     $('.uk-grid-match').on('click', 'button.btn-votar-trabajo', function(e) {
-        const idCategoria = e.currentTarget.dataset.id_categoria;3
+        const idCategoria = e.currentTarget.dataset.id_categoria;
         const idTrabajo = e.currentTarget.dataset.id_trabajo;
+        const numero = e.currentTarget.dataset.numero;
         const idParticipanteCookie = getCookie('id');
         
         $.confirm({
             title: 'Confirmar Voto',
-            content: '¿Seguro que quiere votar por el #'+idTrabajo,
+            content: '¿Seguro que quiere votar por el #'+numero,
             boxWidth: '400px',
             useBootstrap: false,
             buttons: {  
@@ -121,9 +122,9 @@ $('#btn-identificador-aceptar').on('click', function () {
             success: function(response) {
                 if (response.existe == 1) {
                     //alert('El identificador existe en la base de datos');
-                    document.cookie = "identificador=" + identificador + "; expires=Tue, 17 Oct 2023 00:00:00 UTC; path=/;";
-                    document.cookie = "nombre=" + response.nombre + "; expires=Tue, 17 Oct 2023 00:00:00 UTC; path=/;";
-                    document.cookie = "id=" + response.id + "; expires=Tue, 17 Oct 2023 00:00:00 UTC; path=/;";
+                    document.cookie = "identificador=" + identificador + "; expires=Tue, 17 Oct 2024 00:00:00 UTC; path=/;";
+                    document.cookie = "nombre=" + response.nombre + "; expires=Tue, 17 Oct 2024 00:00:00 UTC; path=/;";
+                    document.cookie = "id=" + response.id + "; expires=Tue, 17 Oct 2024 00:00:00 UTC; path=/;";
                     $('#modal-identificador').hide();
                     location.reload();
                     

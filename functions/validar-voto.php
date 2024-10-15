@@ -7,7 +7,7 @@ $idCategoria = $_GET['idCategoria'];
 $idParticipante = $_GET['idParticipante'];
 
 
-$sql = "SELECT id_categoria, id_participante FROM tbl_votaciones WHERE id_categoria = ? AND id_participante = ?;";
+$sql = "SELECT id_categoria, id_participante FROM tbl_votaciones WHERE id_categoria = ? AND id_participante = ? and deleted_at is null;";
 $stmt = $mysqli->prepare($sql);
 
 if ($stmt === false) {

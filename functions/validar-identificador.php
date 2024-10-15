@@ -6,7 +6,7 @@ include_once('db-connection.php');
 $identificador = $_GET['identificador'];
 
 // Crear una consulta SQL
-$sql = "SELECT COUNT(*) existe, id, nombre FROM tbl_participantes WHERE identificador = ? GROUP BY nombre, id;";
+$sql = "SELECT COUNT(*) existe, id, nombre FROM tbl_participantes WHERE identificador = ? and deleted_at is null GROUP BY nombre, id;";
 
 // Preparar la consulta
 $stmt = $mysqli->prepare($sql);

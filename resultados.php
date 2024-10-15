@@ -9,7 +9,7 @@
     </div>
 
     <div class="logo-simposio-container">
-        <img src="./img/logo-simposio.png" alt="" class="logo-simposio">
+        <img src="./img/logo-general-simposio.png" alt="" class="logo-simposio">
         <h3 class="uk-margin-remove"><strong>Ganadores</strong> de cada categoría, muchas felicidades</h3>
         <br><br>
     </div>
@@ -22,10 +22,10 @@
                 <?php
     	            if($row['id_categoria'] == 1 || $row['id_categoria'] == 3){
                         echo '<img class="uk-margin-bottom icon-poster" src="./img/poster.png" alt="poster">';
-                        echo '<h2>Póster #'.$row['id_trabajo'].'</h2>';
+                        echo '<h2>Póster</h2>';
                     }else{
                         echo ' <img class="uk-margin-bottom icon-poster" src="./img/presentacion-oral.png" alt="poster">';
-                        echo '<h3>Presentación #'.$row['id_trabajo'].'</h3>';
+                        echo '<h3>Presentación</h3>';
                     }
                 ?>
                 <div class="categoria-container-votacion uk-padding-small">

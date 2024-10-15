@@ -9,7 +9,7 @@
     </div>
 
     <div class="logo-simposio-container">
-        <img src="./img/logo-simposio.png" alt="" class="logo-simposio">
+        <img src="./img/logo-general-simposio.png" alt="" class="logo-simposio">
         <h3 class="uk-margin-remove">Categoría: <strong><?php echo $descripcionCategoria; ?></strong></h3>
         <br><br>
     </div>
@@ -22,18 +22,18 @@
                 <?php
     	            if($row['id_categoria'] == 1 || $row['id_categoria'] == 3){
                         echo '<img class="uk-margin-bottom icon-poster" src="./img/poster.png" alt="poster">';
-                        echo '<h2>Póster #'.$row['id_trabajo'].'</h2>';
+                        echo '<h2>Póster #'.$row['numero'].'</h2>';
                     }else{
                         echo ' <img class="uk-margin-bottom icon-poster" src="./img/presentacion-oral.png" alt="poster">';
-                        echo '<h3>Presentación #'.$row['id_trabajo'].'</h3>';
+                        echo '<h3>Presentación #'.$row['numero'].'</h3>';
                     }
                 ?>
                 <div class="categoria-container-votacion uk-padding-small">
                     <p><?php echo $row['descripcion']; ?></p>
                 </div>
                 <p><?php echo $row['autor']; ?></p>
-                <!-- <button class="uk-button uk-button-primary btn-votar-trabajo" data-id_categoria="<?php echo $row['id_categoria']; ?>" 
-                data-id_trabajo="<?php echo $row['id_trabajo']; ?>"><span uk-icon="check"></span> Votar</button> -->
+                <button class="uk-button uk-button-primary btn-votar-trabajo" data-numero="<?php echo $row['numero']; ?>" data-id_categoria="<?php echo $row['id_categoria']; ?>" 
+                data-id_trabajo="<?php echo $row['id_trabajo']; ?>"><span uk-icon="check"></span> Votar</button>
             </div>
         </div>
         <?php } ?>
