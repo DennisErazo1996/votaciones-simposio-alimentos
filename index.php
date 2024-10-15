@@ -4,7 +4,7 @@
 <div class="uk-container uk-container-large">
 
     <div class=" uk-margin-medium-top uk-flex uk-flex-between">
-        <a class="uk-button uk-button-primary" href="https://portal.unag.edu.hn/v-simposio-de-alimentos/"><span uk-icon="arrow-left"></span> Regresar</a>
+        <a class="uk-button uk-button-primary" href="https://portal.unag.edu.hn/simposio-de-alimentos/"><span uk-icon="arrow-left"></span> Regresar</a>
         <a class="uk-button uk-button-primary" href="./resultados.php"><span uk-icon="file-edit"></span> Resultados</a>
     </div>
 
