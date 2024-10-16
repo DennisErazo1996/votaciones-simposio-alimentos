@@ -1,10 +1,15 @@
 <?php
 
 // Define los datos de conexión
-$host = "localhost";
+/*$host = "localhost";
 $user = "root";
 $password = "";
-$database = "v_simposio_alimentos";
+$database = "v_simposio_alimentos";*/
+
+$host = "localhost";
+$user = "unagedu_votaciones";
+$password = "Votaciones1234";
+$database = "unagedu_votaciones_simposio_alimentos";
 
 // Crea la conexión
 $mysqli = new mysqli($host, $user, $password, $database);
