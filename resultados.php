@@ -11,7 +11,7 @@
     <div class="logo-simposio-container">
         <img src="./img/logo-general-simposio.png" alt="" class="logo-simposio">
         <!-- <h3 class="uk-margin-remove"><strong>Ganadores</strong> de cada categoría, muchas felicidades</h3> -->
-        <h3 class="uk-margin-remove"><strong>Resultados</strong> de cada categoría</h3>
+        <h3 class="uk-margin-remove"><strong>Ganadores</strong> de cada categoría, muchas felicidades</h3>
         <br><br>
     </div>
 
