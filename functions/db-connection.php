@@ -4,7 +4,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "votaciones_simposio_alimentos";
+$database = "v_simposio_alimentos";
 
 // Crea la conexión
 $mysqli = new mysqli($host, $user, $password, $database);
